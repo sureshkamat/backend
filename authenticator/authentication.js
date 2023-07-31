@@ -9,7 +9,7 @@ const authentication = (req, res, next) => {
         res.send("please login first")
     }
     else{
-        jwt.verify(token, process.env.Secret_Key, async function(err, decoded) {
+        jwt.verify(token, "Masai123", async function(err, decoded) {
             if(err){
                 res.send("please login")
             }

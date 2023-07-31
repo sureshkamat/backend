@@ -15,8 +15,11 @@ app.use(cors({
 }))
 app.use(express.json())
 
-
 app.get("/",async (req,res)=>{
+    res.send("base Api here");
+})
+
+app.get("/user",async (req,res)=>{
     const user=await UserModel.find();
     res.send(user);
 })
